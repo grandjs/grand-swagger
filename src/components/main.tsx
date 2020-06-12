@@ -1,22 +1,22 @@
+import {Server} from "grandjs";
 const {View} = require("grandjs");
 
-
-const SwaggerComponent = ({file, specs}) => {
+const SwaggerComponent = (options:{docs: {[key:string]:any}}) => {
     return (
         <html lang={"en"}>
         <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="swagger-ui.css"/>
+        <link rel="stylesheet" type="text/css" href="/swagger-assets/swagger-ui.css"/>
         </head>
         <body>
         <div id="swagger-ui"></div>
-            <script src="swagger-ui-bundle.js"></script>
-            <script src="swagger-ui-standalone-preset.js"></script>
+            <script src="/swagger-assets/swagger-ui-bundle.js"></script>
+            <script src="/swagger-assets/swagger-ui-standalone-preset.js"></script>
             <script>
             {`
                 window.onload = function() {
                     let ui = SwaggerUIBundle({
-                        spec: ${JSON.stringify(specs)},
+                        spec: ${JSON.stringify(options.docs)},
                         dom_id: '#swagger-ui',
                         deepLinking: true,
                         layout: 'StandaloneLayout',

@@ -1,0 +1,42 @@
+{
+  "name": "grand-swagger",
+  "version": "1.0.0",
+  "description": "A grandjs helper package for generating swagger documentation from json",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tareksalem/grand-swagger.git"
+  },
+  "keywords": [
+    "swagger",
+    "openapi",
+    "documentation",
+    "nodejs",
+    "documentation",
+    "js",
+    "doc",
+    "grandjs",
+    "api",
+    "documentation"
+  ],
+  "author": "Tarek Salem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tareksalem/grand-swagger/issues"
+  },
+  "homepage": "https://github.com/tareksalem/grand-swagger#readme",
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "@types/swagger-ui-dist": "^3.0.5",
+    "ts-node": "^8.10.2"
+  },
+  "dependencies": {
+    "grandjs": "^2.2.2",
+    "swagger-ui-dist": "^3.26.2"
+  }
+}

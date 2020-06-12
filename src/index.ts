@@ -1,8 +1,13 @@
-import {View} from "grandjs";
+import {View, Server} from "grandjs";
 import path, { resolve } from "path";
-View.settings.set("views", path.join("/src", "/components"));
+// `${__dirname}/components`
+View.settings.set("views",path.join("/node_modules", "/grand-swagger/lib/components"));
 import SwaggerUiDist from "swagger-ui-dist";
 const SwaggerComponent = View.importJsx("/main.jsx");
 
+Server.static({
+    url: "/swagger-assets",
+    path: SwaggerUiDist.getAbsoluteFSPath()
+})
 
-export default {SwaggerComponent}
+export {SwaggerComponent}
