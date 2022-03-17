@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "grandjs": "^2.2.2",
-    "swagger-ui-dist": "^3.26.2"
+    "swagger-ui-dist": "^4.1.3"
   }
 }
